@@ -31,7 +31,7 @@ context('Exercicio - Testes End-to-end - Fluxo de pedido', () => {
         cy.addProdutos('Cassia Funnel Sweatshirt', 'S', 'Orange')
         cy.addProdutos('Eos V-Neck Hoodie', 'XL', 'Green')
         cy.get('.dropdown-toggle > .text-skin > .icon-basket').click()
-        cy.get('#cart > .dropdown-menu > .widget_shopping_cart_content > .mini_cart_content > .mini_cart_inner > .mcart-border > .buttons > .checkout').click()
+        cy.get('#cart .checkout').click()
         EnderecoPage.editarEnderecoFaturamento(
             dadosEndereco[2].nome,
             dadosEndereco[2].sobrenome,
